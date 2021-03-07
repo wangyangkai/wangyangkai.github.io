@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" >
     <meta name="baidu-site-verification" content="dIcXMeY8Ya" />
     
-    <title>Hello World | Hexo</title>
+    <title>polipo HTTP proxy | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" >
     <meta name="keywords" content="Wang Yangkai, 王阳开, linux, 内核, kernel, driver, ALSA" >
     <meta name="description" content="linux驱动开发" >
@@ -17,7 +17,7 @@
     <link rel="icon" href="/favicon.ico" >
     
     
-<link rel="stylesheet" href="/css/style.css?v=1615107745518.css">
+<link rel="stylesheet" href="/css/style.css?v=1615107745512.css">
 
     <!--[if lt IE 9]>
     
@@ -50,19 +50,19 @@
         <div class="dropnav iconfont icon-nav" id="JELON__btnDropNav"></div>
         <ul class="menu hidden" id="JELON__menu">
             
-            <li rel="/2021/03/07/hello-world/index.html" class="item ">
+            <li rel="/2021/03/07/polipo-HTTP-proxy/index.html" class="item ">
                 <a href="/" title="首页" class="iconfont icon-home">&nbsp;首页</a>
             </li>
             
-            <li rel="/2021/03/07/hello-world/index.html" class="item ">
+            <li rel="/2021/03/07/polipo-HTTP-proxy/index.html" class="item ">
                 <a href="/archives/" title="归档" class="iconfont icon-archives">&nbsp;归档</a>
             </li>
             
-            <li rel="/2021/03/07/hello-world/index.html" class="item ">
+            <li rel="/2021/03/07/polipo-HTTP-proxy/index.html" class="item ">
                 <a href="/about/" title="关于" class="iconfont icon-staff">&nbsp;关于</a>
             </li>
             
-            <li rel="/2021/03/07/hello-world/index.html" class="item ">
+            <li rel="/2021/03/07/polipo-HTTP-proxy/index.html" class="item ">
                 <a href="/comment/" title="留言" class="iconfont icon-comment">&nbsp;留言</a>
             </li>
             
@@ -113,26 +113,14 @@
 <!-- 文章 -->
 <article class="post article">
     <header class="text-center">
-        <h3 class="post-title"><span>Hello World</span></h3>
+        <h3 class="post-title"><span>polipo HTTP proxy</span></h3>
     </header>
     <p class="post-meta text-center">
         Yangkai 发表于
-        <time datetime="2021-03-07T04:38:59.247Z">2021-03-07</time>
+        <time datetime="2021-03-07T07:09:35.000Z">2021-03-07</time>
     </p>
     <div id="JELON__articlePostContent" class="post-content">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>sudo apt-get install polipo<br><br><br>sudo vim /etc/polipo/config<br>Add:<br>socksParentProxy = “127.0.0.1:1080”<br>socksProxyType = socks5<br>proxyPort = 8123<br><br><br>sudo service polipo restart<br>or sudo systemctl restart polipo<br><br><br>export http_proxy=’’ https_proxy=’’<br>export http_proxy=’<a href="http://127.0.0.1:8123&#39;">http://127.0.0.1:8123&#39;</a> https_proxy=’<a href="https://127.0.0.1:8123&#39;">https://127.0.0.1:8123&#39;</a><br><br></p>
 
     </div>
     <p class="eof">-- EOF --</p>
@@ -166,18 +154,18 @@
     
     <span class="prev fl">
         上一篇<br >
-        <a href="/2021/03/07/SSH-login-to-moode-of-Rraspberry-Pi/">
-            
-                SSH login to moode of Rraspberry Pi
-            
-        </a>
+        <a href="javascript: void(0);">没有上一篇了</a>
     </span>
     
 
     
     <span class="next fr">
         下一篇<br >
-        <a href="javascript: void(0);">没有下一篇了</a>
+        <a href="/2021/03/07/find-and-delete-files-command-on-ubuntu/">
+            
+                find and delete files command on ubuntu
+            
+        </a>
     </span>
     
 </div>
@@ -273,7 +261,7 @@
     <!--博客js脚本 -->
     <!-- 这里放网站js脚本 -->
 
-<script src="/js/main.js?v=1615107745519.js"></script>
+<script src="/js/main.js?v=1615107745514.js"></script>
 
 
 </body>
